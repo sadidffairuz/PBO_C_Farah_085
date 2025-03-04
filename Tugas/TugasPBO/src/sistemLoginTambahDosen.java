@@ -1,4 +1,4 @@
-package login;
+package loginSystem;
 
 import java.util.Scanner;
 
@@ -35,13 +35,33 @@ class Mahasiswa {
     }
 }
 
-public class sistemLogindenganPackage {
+class Dosen {
+    private String nama;
+    private String nip;
+
+    public Dosen(String nama, String nip) {
+        this.nama = nama;
+        this.nip = nip;
+    }
+
+    public boolean login(String inputNama, String inputNip) {
+        return nama.equals(inputNama) && nip.equals(inputNip);
+    }
+
+    public void printData() {
+        System.out.println("Nama: " + nama);
+        System.out.println("NIP: " + nip);
+    }
+}
+
+public class sistemLoginTambahDosen {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Pilih Jenis Login:");
         System.out.println("1. Admin");
         System.out.println("2. Mahasiswa");
+        System.out.println("3. Dosen");
         System.out.print("Masukkan pilihan: ");
         int pilihan = sc.nextInt();
         sc.nextLine();
@@ -70,6 +90,19 @@ public class sistemLogindenganPackage {
                 mahasiswa.printData();
             } else {
                 System.out.println("Login gagal! Nama atau NIM salah.");
+            }
+        } else if (pilihan == 3) {
+            System.out.print("Masukkan Nama: ");
+            String nama = sc.nextLine();
+            System.out.print("Masukkan NIP: ");
+            String nip = sc.nextLine();
+
+            Dosen dosen = new Dosen("Dr. Budi Santoso", "1980101012345678");
+            if (dosen.login(nama, nip)) {
+                System.out.println("Login Dosen berhasil!");
+                dosen.printData();
+            } else {
+                System.out.println("Login gagal! Nama atau NIP salah.");
             }
         } else {
             System.out.println("Pilihan tidak valid.");
