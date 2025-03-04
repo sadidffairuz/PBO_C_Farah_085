@@ -37,20 +37,20 @@ class Mahasiswa {
 
 class Dosen {
     private String nama;
-    private String nip;
+    private String nidn;
 
-    public Dosen(String nama, String nip) {
+    public Dosen(String nama, String nidn) {
         this.nama = nama;
-        this.nip = nip;
+        this.nidn = nidn;
     }
 
     public boolean login(String inputNama, String inputNip) {
-        return nama.equals(inputNama) && nip.equals(inputNip);
+        return nama.equals(inputNama) && nidn.equals(inputNip);
     }
 
     public void printData() {
         System.out.println("Nama: " + nama);
-        System.out.println("NIP: " + nip);
+        System.out.println("NIP: " + nidn);
     }
 }
 
@@ -94,15 +94,15 @@ public class sistemLoginTambahDosen {
         } else if (pilihan == 3) {
             System.out.print("Masukkan Nama: ");
             String nama = sc.nextLine();
-            System.out.print("Masukkan NIP: ");
+            System.out.print("Masukkan NIDN: ");
             String nip = sc.nextLine();
 
-            Dosen dosen = new Dosen("Dr. Budi Santoso", "1980101012345678");
+            Dosen dosen = new Dosen("ASK", "0701038202");
             if (dosen.login(nama, nip)) {
                 System.out.println("Login Dosen berhasil!");
                 dosen.printData();
             } else {
-                System.out.println("Login gagal! Nama atau NIP salah.");
+                System.out.println("Login gagal! Nama atau NIDN salah.");
             }
         } else {
             System.out.println("Pilihan tidak valid.");
