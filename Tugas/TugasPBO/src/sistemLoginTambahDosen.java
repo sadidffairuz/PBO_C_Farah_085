@@ -50,7 +50,7 @@ class Dosen {
 
     public void printData() {
         System.out.println("Nama: " + nama);
-        System.out.println("NIP: " + nidn);
+        System.out.println("NIDN: " + nidn);
     }
 }
 
