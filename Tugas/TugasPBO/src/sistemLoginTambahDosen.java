@@ -95,10 +95,10 @@ public class sistemLoginTambahDosen {
             System.out.print("Masukkan Nama: ");
             String nama = sc.nextLine();
             System.out.print("Masukkan NIDN: ");
-            String nip = sc.nextLine();
+            String nidn = sc.nextLine();
 
             Dosen dosen = new Dosen("ASK", "0701038202");
-            if (dosen.login(nama, nip)) {
+            if (dosen.login(nama, nidn)) {
                 System.out.println("Login Dosen berhasil!");
                 dosen.printData();
             } else {
