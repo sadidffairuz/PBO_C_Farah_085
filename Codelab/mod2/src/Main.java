@@ -1,10 +1,10 @@
-class Hewan {
+class Hewann {
     String Nama;
     String Jenis;
     String Suara;
     int Umur;
 
-    public Hewan(String Nama, String Jenis, String Suara, int Umur) {
+    public Hewann(String Nama, String Jenis, String Suara, int Umur) {
         this.Nama = Nama;
         this.Jenis = Jenis;
         this.Suara = Suara;
@@ -30,8 +30,8 @@ class Hewan {
 
 public class Main {
     public static void main(String[] args) {
-        Hewan hewan1 = new Hewan("Kucing", "Mamalia", "Nyann~~", 2);
-        Hewan hewan2 = new Hewan("Anjing", "Mamalia", "Woof-Woof!!", 3);
+        Hewann hewan1 = new Hewann("Kucing", "Mamalia", "Nyann~~", 2);
+        Hewann hewan2 = new Hewann("Anjing", "Mamalia", "Woof-Woof!!", 3);
 
         hewan1.tampilkanInfo();
         System.out.println();
