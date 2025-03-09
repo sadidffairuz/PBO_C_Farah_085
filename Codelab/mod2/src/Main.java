@@ -1,15 +1,48 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+class Hewan {
+    String Nama;
+    String Jenis;
+    String Suara;
+    int Umur;
+
+    public Hewan(String Nama, String Jenis, String Suara, int Umur) {
+        this.Nama = Nama;
+        this.Jenis = Jenis;
+        this.Suara = Suara;
+        this.Umur = Umur;
+    }
+
+    public void tampilkanInfo() {
+        System.out.println("Nama: " + Nama);
+        System.out.println("Jenis: " + Jenis);
+        System.out.println("Suara: " + Suara);
+        System.out.println("Umur: " + Umur + " tahun");
+    }
+
+    public void buatSuara() {
+        System.out.println(Nama + " membuat suara: " + Suara);
+    }
+
+    public void tampilkanInfoTambahan() {
+        System.out.println("Hewan ini adalah " + Jenis + " yang bernama " + Nama + ".");
+        System.out.println("Umur " + Nama + " adalah " + Umur + " tahun dan membuat suara " + Suara + ".");
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Hewan hewan1 = new Hewan("Kucing", "Mamalia", "Nyann~~", 2);
+        Hewan hewan2 = new Hewan("Anjing", "Mamalia", "Woof-Woof!!", 3);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        hewan1.tampilkanInfo();
+        System.out.println();
+        hewan2.tampilkanInfo();
+        System.out.println();
+
+        hewan1.buatSuara();
+        hewan2.buatSuara();
+        System.out.println();
+
+        hewan1.tampilkanInfoTambahan();
+        hewan2.tampilkanInfoTambahan();
     }
 }
