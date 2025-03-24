@@ -37,12 +37,12 @@ public class MainCodelab1 {
 
             System.out.print("Pilih suara:\n1. Nyann~~\n2. Woof-Woof!!\n3. Moooo\n4. Chirp-Chirp\n5. Roarrr\nPilihan: ");
             int pilihanSuara = scanner.nextInt();
-            scanner.nextLine(); // Membersihkan buffer scanner
+            scanner.nextLine();
 
             String suara;
             switch (pilihanSuara) {
                 case 1:
-                    suara = "Nyann~~";
+                    suara = "Meoww";
                     break;
                 case 2:
                     suara = "Woof-Woof!!";
@@ -54,7 +54,7 @@ public class MainCodelab1 {
                     suara = "Chirp-Chirp";
                     break;
                 case 5:
-                    suara = "Roarrr";
+                    suara = "Aummm";
                     break;
                 default:
                     suara = "Suara tidak dikenal";
